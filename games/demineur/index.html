@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<script src="main.js"></script>
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	
+	<title>Démineur</title>
+</head>
+
+<body>
+	<div id="container" oncontextmenu="return false">
+		<div id="top">
+			<div id="bombs">
+			0
+			</div>
+			<button id="op" onclick="options()"style="position:absolute;left:25%;padding:0px;height:60px;"><img src="img/options.png" height="58px"></button>
+			<button id="ng" onclick="newgame()">New Game</button>
+			<div id="timer">
+			0
+			</div>
+		</div>
+		<div id="game"></div>
+		<div id="options">
+		<div style="padding:10px">
+			<div style="text-decoration: underline;text-decoration-color:red;text-align:center;"> Options </div>
+			<br>
+			<div>
+				Number of Mines : 
+				<span id="nmine"> 
+				100
+				</span>
+				<input class="slider" oninput="myslider(this)" type="range" min="10" max="500" value="100" id="inputn">
+			</div>
+				<br>
+			<div> Number of Tiles : <br>
+				<br>
+				<span id="xnum">
+				Width : 30 Tiles
+				</span>
+				<input class="slider" oninput="myslider(this)" type="range" min="10" max="40" value="30" id="inputx"> 
+				<br>
+				<span id="ynum">
+				Height : 20 Tiles
+				</span>
+				<input class="slider" oninput="myslider(this)" type="range" min="10" max="40" value="20" id="inputy">
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+
+
+

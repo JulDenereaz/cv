@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="icon" href="img/pickaxe.png" type="image/x-icon">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rochester|Bree+Serif" />
+		<title>Miner</title>
+    </head>
+
+    <body onload="update()">
+		<div>
+			<div id=main>
+				<h1>Miner | The Idle Game</h1>
+				<div id=mainmenu>
+					<button id=bopt onclick="options()">
+						<img src="img/breg.png" draggable="false" height="32" width="32">
+					</button>
+					<button id=binfo onclick="info()">
+						<img src="img/binfo.png" draggable="false" height="32" width="32">
+					</button>	
+					<button id=bstats onclick="stats()">
+						<img src="img/bstats.png" draggable="false" height="32" width="32">
+					</button>
+					<div id=zoption>
+						<h2> OPTIONS </h2>
+						<p>Sound : <input id=checkbox type="checkbox" checked onclick="bmute()"></p>
+						<p>Tooltips : <input id=checkbox type="checkbox" checked onclick="btooltip()"></p>
+					</div>
+					<div id=zinfo>
+						<h2> INFO </h2>
+						<p>
+							You are a miner, you just move in and looking for prosperity. You can use your stone to upgrade your pickaxe, or you can go to the village to sell your stone for gold or have a good beer ! Have Fun !
+						</p>
+					</div>
+					<div id=zstats>
+						<h2> STATS </h2>
+						<p>Total Click : <span id=totalclick>0</span></p>
+					</div>
+				</div>
+				<img draggable="false" id="worker" src="img/worker.gif" height="190px" style="visibility:hidden;position:absolute;top:50px;left:230px">
+				<div>
+					<img id=pickaxe class=pickaxe src="img/pickaxe.png" draggable="false">
+					<button id=bmine onclick="rockclick()">
+						<img src="img/bmine.png" id=rimg draggable="false">
+					</button>
+					<canvas height="256px" width="256px" style="position:absolute;top:180px;left:95px;z-index:99;pointer-events:none" id="rect">
+					</canvas>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div  id=mainmenu>
+					<div id="1" class="mainstats" style="width:160px">
+						HP : 
+						<span id=hp style="color:black;pointer-events:none">
+							0
+						</span>
+					</div>
+					<div id="2" class="mainstats" style="width:160px">
+						Deep Level : 
+						<span id=lvlrock style="color:black;pointer-events:none">
+							0
+						</span>
+					</div>
+					<div id="3" class="mainstats" style="width:160px">
+						Pick Power : 
+						<span id=pickpower style="color:black;pointer-events:none">
+							0
+						</span>
+					</div>
+					<div id="6" class="mainstats" style="width:160px">
+						Stone : 
+						<span id=nstone style="color:black;pointer-events:none">
+							0
+						</span>
+					</div>
+					<div id="8" class="mainstats" style="width:160px">
+						Gold : 
+						<span id=ngold style="color:black;pointer-events:none">
+							0
+						</span> 
+						<img src="img/dollar.gif" height="24" style="vertical-align:-5px">
+					</div>
+					<div id="10" class="mainstats" style="width:160px">
+						Workers : 
+						<span id="nworker" style="color:black;pointer-events:none">
+							0
+						</span>
+					</div>
+					<div id="7" class="mainstats" style="width:160px"> Pick Durability : 
+						<br>
+						<br>
+						<div style="width:380px;padding:2px;background-color:transparent;border:1px solid black;text-align:center;pointer-events:none">
+							<div id=pickdurability style="width:380px;background-color:green;color:black">0
+							</div>
+						</div>
+					</div>
+					<div id="9" class="mainstats" style="width:160px">Energy : 
+						<br>
+						<br>
+						<div style="width:380px;padding:2px;background-color:transparent;border:1px solid black	;text-align:center;pointer-events:none">
+							<div id=energy style="width:380px;background-color:green;color:black">0
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div id=divbwindows>
+					<p>
+					<button id=bsmith onclick="smith()">
+						<img id="5" src="img/blacksmith.png" draggable="false" width="100">
+					</button>
+					<button id=bvillage onclick="village()">
+						<img id="4" src="img/bvillage.png" draggable="false" width="100">
+					</button>
+					</p>
+				</div>
+			</div>
+			<div id=smith>
+				<h1>Blacksmith</h1>
+				<div id=smithmenu>
+					<h3>Deep Level (<span id=lvlrockmenu>0</span>) : 
+						<button id=blevelrockup onclick="levelrockup()">
+							+
+						</button>
+						<button id=blevelrockdown onclick="levelrockdown()">
+							-
+						</button>
+					</h3>
+					<h3>Pick Power (<span id=costbpickpower>0</span>) :
+						<button id=bpickpower onclick="bpickpower()">
+							Upgrade
+						</button>
+					</h3>
+					<h3>Pick Durability (<span id=costbpickdurability>0</span>) :
+						<button id=bpickdurability onclick="bpickdurability()" >
+							Upgrade
+						</button>
+					</h3>
+					<h3>Repair Pickaxe (<span id=costbpickrepair>0</span>) :
+						<button id=brepair onclick="bpickrepair()" >
+							Repair
+						</button>
+					</h3>
+					<img draggable="false" src="img/blacksmith.png" style="float:bottom">
+				</div>
+			</div>
+			<div id="village">
+				<h1>Village</h1>
+				<div id="villagemenu">
+					<h3>Sell (<span id="nstonetosell">0</span>) : 
+						<button id="bstonetosellall" onclick="bstonetosellall()">
+							All
+						</button>
+						<button id="bstonetosellx100" onclick="bstonetosellx100()">
+							x100
+						</button>
+						<button id="bstonetosellx10" onclick="bstonetosellx10()">
+							x10
+						</button>
+					</h3>
+					<h3> Gold value : 
+						<span id="nstonetosellgold">0</span>
+						<button id="bstonetosell" onclick="bstonetosell()">
+							Sell
+						</button>
+					</h3>
+					<h3> 
+						Workers (
+						<span id="maxworker">
+							0
+						</span>
+						; 
+						<span id="costbworker">
+							0
+						</span>) :
+						<button id="bworker" onclick="bworker()">
+							Hire
+						</button>
+					</h3>
+					<h3>
+						Worker Efficiency (<span id="lvlworker">0</span>) :
+					</h3>
+					<h3>
+						Cost : <span id="costlvlworker">0</span>
+						<button id="blvlworker" onclick="blvlworker()">
+							Upgrade
+						</button>
+					</h3>
+					<h3 id="11">
+						Mine Facility (<span id="lvlminefacility">0</span>) :
+					</h3>
+					<h3>
+						Cost : <span id ="costlvlminefacility">0</span>
+						<button id="bminefacility" onclick="bminefacility()">
+							Upgrade
+						</button>
+					</h3>
+				</div>
+			</div>
+			<span class="tooltip" id=tooltip1>Health points of the rock. Each time it gets to 0, you get some stone</span>
+			<span class="tooltip" id=tooltip2>Deeper you go, harder it is</span>
+			<span class="tooltip" id=tooltip3>Power of the Pickaxe</span>
+			<span class="tooltip" id=tooltip4>Go To the Village</span>
+			<span class="tooltip" id=tooltip5>Go To the Blacksmith</span>
+			<span class="tooltip" id=tooltip6>You get stone by reducing the HP of the rock to 0.</span>
+			<span class="tooltip" id=tooltip7>The durability of the pick is changed by the deep level, the level durability of the pick, and the level of pick power</span>
+			<span class="tooltip" id=tooltip8>You get Gold by selling stone in the village</span>
+			<span class="tooltip" id=tooltip9>You lose energy by clicking on the rock</span>
+			<span class="tooltip" id=tooltip10>The worker works for you. You can hire more in the village. Upgrading the mine facility increase the maximum of Worker allowed</span>
+			<span class="tooltip" id=tooltip11>Increase the max of workers.</span>
+		</div>
+	</body>
+</html>
+

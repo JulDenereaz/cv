@@ -1,19 +1,7 @@
-# Simple .htaccess that definitely works
+# Minimal .htaccess
 RewriteEngine On
 
-# First, handle actual files - if file exists, serve it directly
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^.*$ - [L]
-
-# Handle directories - if directory exists, serve it directly
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^.*$ - [L]
-
-# Only then handle clean URLs for PHP files
+# Clean URLs for PHP files (only if file doesn't exist)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
-# Security
-<Files ~ "^\.ht">
-Order allow,deny
-Deny from all
-</Files>

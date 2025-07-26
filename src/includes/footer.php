@@ -7,7 +7,7 @@
     </footer>
     
     <!-- Main JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     
     <!-- Additional JavaScript if specified -->
     <?php if (isset($additionalJS)): ?>

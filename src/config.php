@@ -12,7 +12,7 @@ $services = [
         'name' => 'Neptune',
         'description' => 'Media Server & Storage',
         'icon' => 'server',
-        'url' => '/neptune', // This will be handled by your reverse proxy
+        'url' => 'http://neptune18.quickconnect.to', // Direct link to Neptune NAS
         'color' => '#4a90e2'
     ]
 ];

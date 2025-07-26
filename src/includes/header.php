@@ -29,7 +29,9 @@
     <meta property="og:title" content="<?php echo isset($pageTitle) ? $pageTitle . ' | ' . SITE_NAME : SITE_NAME; ?>">
     <meta property="og:description" content="<?php echo $pageDescription ?? 'Portfolio personnel de ' . SITE_AUTHOR; ?>">
     <meta property="og:type" content="website">
+    <?php if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])): ?>
     <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <?php endif; ?>
     
     <!-- Additional CSS if specified -->
     <?php if (isset($additionalCSS)): ?>

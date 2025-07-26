@@ -19,12 +19,6 @@ $services = [
 
 // Games Configuration
 $games = [
-    '2048' => [
-        'name' => '2048',
-        'description' => 'Puzzle number game',
-        'category' => 'puzzle',
-        'color' => '#edc53f'
-    ],
     'snake' => [
         'name' => 'Snake',
         'description' => 'Classic snake game',
@@ -42,24 +36,6 @@ $games = [
         'description' => 'Classic card game',
         'category' => 'card',
         'color' => '#2c3e50'
-    ],
-    'Pong' => [
-        'name' => 'Pong',
-        'description' => 'Classic arcade game',
-        'category' => 'arcade',
-        'color' => '#9b59b6'
-    ],
-    'ConnectFour' => [
-        'name' => 'Connect Four',
-        'description' => 'Strategy board game',
-        'category' => 'strategy',
-        'color' => '#f39c12'
-    ],
-    'BrickBreaker' => [
-        'name' => 'Brick Breaker',
-        'description' => 'Breakout-style game',
-        'category' => 'arcade',
-        'color' => '#1abc9c'
     ],
     'Pneumo-Man' => [
         'name' => 'Pneumo-Man',
@@ -85,12 +61,6 @@ $games = [
         'category' => 'utility',
         'color' => '#16a085'
     ],
-    'painter' => [
-        'name' => 'Painter',
-        'description' => 'Digital drawing tool',
-        'category' => 'creative',
-        'color' => '#e67e22'
-    ]
 ];
 
 // Get available games by scanning directory

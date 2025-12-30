@@ -20,7 +20,7 @@ $services = [
         'description' => 'Media Server & Storage',
         'icon' => 'server',
         'url' => 'https://middle-earth.denereaz.net',
-        'color' => '#e24a4aff'
+        'color' => '#ff0000'
     ]
 ];
 

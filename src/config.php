@@ -14,6 +14,13 @@ $services = [
         'icon' => 'server',
         'url' => 'http://neptune18.quickconnect.to', // Direct link to Neptune NAS
         'color' => '#4a90e2'
+    ],
+    'mordor' => [
+        'name' => 'Mordor',
+        'description' => 'Media Server & Storage',
+        'icon' => 'server',
+        'url' => 'https://middle-earth.denereaz.net',
+        'color' => '#e24a4aff'
     ]
 ];
 

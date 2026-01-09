@@ -19,7 +19,7 @@ $services = [
         'name' => 'Mordor',
         'description' => 'Media Server & Storage',
         'icon' => 'server',
-        'url' => 'https://middle-earth.denereaz.net',
+        'url' => 'https://mordor.denereaz.net',
         'color' => '#ff0000'
     ]
 ];

@@ -3,59 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV</title>
+    <title>Julien Denereaz - CV</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="name">Your Name</h1>
-            <p class="title">Software Developer</p>
-            <div class="contact">
-                <span class="contact-item">email@example.com</span>
-                <span class="contact-item">+1 (555) 123-4567</span>
-                <span class="contact-item">LinkedIn | GitHub</span>
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <img src="" alt="Profile Photo" id="profile-img">
+                    <div class="photo-placeholder">JD</div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Julien Denereaz</h1>
+                    <p class="title">Software Developer & Technology Enthusiast</p>
+                    <div class="contact">
+                        <div class="contact-row">
+                            <span class="contact-item">📧 julien.denereaz@example.com</span>
+                            <span class="contact-item">📱 +41 XX XXX XX XX</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-item">🌐 LinkedIn: linkedin.com/in/juldenereaz</span>
+                            <span class="contact-item">💻 GitHub: github.com/JulDenereaz</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-item">📍 Location: Switzerland</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
         <main class="main-content">
             <section class="section">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title">Professional Summary</h2>
                 <p class="section-content">
-                    A passionate software developer with experience in modern web technologies.
-                    Focused on creating clean, efficient, and user-friendly applications.
+                    Data Scientist with a PhD in Life Sciences, specializing in bioinformatics and genomic data analysis. 
+                    Currently working at CHUV's Data Stewardship Biomed Unit, building software solutions that help scientists 
+                    better manage and organize their biomedical data. Passionate about translating complex biological questions 
+                    into computational solutions, with extensive experience in Next-Generation Sequencing (NGS), 
+                    genome-wide genetic interaction networks, and full-stack development for scientific applications.
                 </p>
             </section>
 
             <section class="section">
-                <h2 class="section-title">Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="job-title">Senior Software Developer</h3>
-                        <span class="job-period">2022 - Present</span>
-                    </div>
-                    <p class="company">Company Name</p>
-                    <ul class="job-description">
-                        <li>Developed and maintained web applications using TypeScript and React</li>
-                        <li>Collaborated with cross-functional teams to deliver high-quality software</li>
-                        <li>Mentored junior developers and conducted code reviews</li>
-                    </ul>
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-container" id="experience-container">
+                    <!-- Experience items will be populated by TypeScript -->
                 </div>
             </section>
 
             <section class="section">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid" id="skills-container">
-                    <!-- Skills will be populated by TypeScript -->
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-section">
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Programming Languages</h3>
+                        <div class="skills-grid" id="languages-container"></div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Frameworks & Libraries</h3>
+                        <div class="skills-grid" id="frameworks-container"></div>
+                    </div>
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Tools & Technologies</h3>
+                        <div class="skills-grid" id="tools-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-container" id="projects-container">
+                    <!-- Projects will be populated by TypeScript -->
                 </div>
             </section>
 
             <section class="section">
                 <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <h3 class="degree">Bachelor of Computer Science</h3>
-                    <p class="school">University Name</p>
-                    <span class="graduation-year">2020</span>
+                <div class="education-container" id="education-container">
+                    <!-- Education items will be populated by TypeScript -->
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages-container" id="languages-spoken-container">
+                    <!-- Languages will be populated by TypeScript -->
                 </div>
             </section>
         </main>

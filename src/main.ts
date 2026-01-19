@@ -319,6 +319,8 @@ class CVApp {
   }
 
   public init(): void {
+    console.log('Data object:', this.data);
+    console.log('Qualifications exist?', this.data.qualifications ? 'Yes' : 'No');
     this.setupProfilePhoto();
     this.renderSkills();
     this.renderExperience();

@@ -350,8 +350,15 @@ class CVApp {
     }
     renderQualifications() {
         const container = document.getElementById('qualifications-container');
-        if (!container)
+        if (!container) {
+            console.error('qualifications-container not found');
             return;
+        }
+        console.log('Qualifications data:', this.data.qualifications);
+        if (!this.data.qualifications || this.data.qualifications.length === 0) {
+            console.error('No qualifications data found');
+            return;
+        }
         this.data.qualifications.forEach(qual => {
             const qualElement = document.createElement('div');
             qualElement.className = 'qualification-item';

@@ -319,6 +319,7 @@ class CVApp {
   }
 
   public init(): void {
+    this.setupProfilePhoto();
     this.renderSkills();
     this.renderExperience();
     this.renderProjects();
@@ -331,6 +332,23 @@ class CVApp {
     this.renderHobbies();
     this.addInteractivity();
     console.log('CV App initialized');
+  }
+
+  private setupProfilePhoto(): void {
+    const img = document.getElementById('profile-img') as HTMLImageElement;
+    const placeholder = document.querySelector('.photo-placeholder') as HTMLElement;
+    
+    if (img && placeholder) {
+      img.onload = () => {
+        img.style.display = 'block';
+        placeholder.style.display = 'none';
+      };
+      
+      img.onerror = () => {
+        img.style.display = 'none';
+        placeholder.style.display = 'flex';
+      };
+    }
   }
 
   private renderSkills(): void {

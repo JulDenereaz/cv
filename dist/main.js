@@ -241,6 +241,7 @@ class CVApp {
         };
     }
     init() {
+        this.setupProfilePhoto();
         this.renderSkills();
         this.renderExperience();
         this.renderProjects();
@@ -253,6 +254,20 @@ class CVApp {
         this.renderHobbies();
         this.addInteractivity();
         console.log('CV App initialized');
+    }
+    setupProfilePhoto() {
+        const img = document.getElementById('profile-img');
+        const placeholder = document.querySelector('.photo-placeholder');
+        if (img && placeholder) {
+            img.onload = () => {
+                img.style.display = 'block';
+                placeholder.style.display = 'none';
+            };
+            img.onerror = () => {
+                img.style.display = 'none';
+                placeholder.style.display = 'flex';
+            };
+        }
     }
     renderSkills() {
         const categories = ['languages', 'frameworks', 'tools'];

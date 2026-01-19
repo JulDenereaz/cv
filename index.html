@@ -11,8 +11,8 @@
         <header class="header">
             <div class="profile-section">
                 <div class="profile-photo" style="position: relative; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid #3498db; flex-shrink: 0;">
-                    <img src="profile.jpg" alt="Julien Dénéréaz Profile Photo" id="profile-img" style="width: 120px; height: 120px; object-fit: cover; display: none; position: absolute; top: 0; left: 0;">
-                    <div class="photo-placeholder" style="width: 100%; height: 100%; background: linear-gradient(135deg, #3498db, #5dade2); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">JD</div>
+                    <img src="profile.jpg" alt="Julien Dénéréaz Profile Photo" id="profile-img" style="width: 120px; height: 120px; object-fit: cover; display: block; position: absolute; top: 0; left: 0;" onerror="this.style.display='none'; document.querySelector('.photo-placeholder').style.display='flex';" onload="document.querySelector('.photo-placeholder').style.display='none';">
+                    <div class="photo-placeholder" style="width: 100%; height: 100%; background: linear-gradient(135deg, #3498db, #5dade2); display: none; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">JD</div>
                 </div>
                 <div class="profile-info">
                     <h1 class="name">Julien Dénéréaz</h1>

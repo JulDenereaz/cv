@@ -1,0 +1,17 @@
+{
+  "name": "cv-webpage",
+  "version": "1.0.0",
+  "description": "A clean CV webpage built with TypeScript",
+  "main": "index.html",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

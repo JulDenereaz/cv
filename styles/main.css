@@ -1,0 +1,212 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --text-light: #666;
+  --background: #fff;
+  --border-color: #e1e8ed;
+  --section-spacing: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: var(--section-spacing);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--section-spacing);
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.section {
+  margin-bottom: var(--section-spacing);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.section-content {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.experience-item {
+  margin-bottom: 1.5rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.job-period {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.company {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.job-description {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.job-description li {
+  color: var(--text-light);
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+
+.job-description li:before {
+  content: "▸";
+  color: var(--secondary-color);
+  position: absolute;
+  left: -1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, var(--secondary-color), #5dade2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+}
+
+.education-item {
+  margin-bottom: 1rem;
+}
+
+.degree {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.school {
+  color: var(--text-light);
+  margin-bottom: 0.3rem;
+}
+
+.graduation-year {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  .name {
+    font-size: 2rem;
+  }
+  
+  .contact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* Print Styles */
+@media print {
+  .container {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .skill-item {
+    background: var(--border-color) !important;
+    color: var(--text-color) !important;
+  }
+}

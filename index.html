@@ -1,84 +1,66 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Pluton</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="prerender" href="http://pluton18.quickconnect.to">
-	<link rel="prerender" href="http://neptune18.quickconnect.to">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - CV</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-	<div class="page-wrap">
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Your Name</h1>
+            <p class="title">Software Developer</p>
+            <div class="contact">
+                <span class="contact-item">email@example.com</span>
+                <span class="contact-item">+1 (555) 123-4567</span>
+                <span class="contact-item">LinkedIn | GitHub</span>
+            </div>
+        </header>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul>
-				<li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
-				<li><a href="games.html"><span class="icon fa-gamepad"></span></a></li>
-			</ul>
-		</nav>
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">About</h2>
+                <p class="section-content">
+                    A passionate software developer with experience in modern web technologies.
+                    Focused on creating clean, efficient, and user-friendly applications.
+                </p>
+            </section>
 
-		<!-- Main -->
-		<section id="main">
-			<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<h1>Bienvenue sur Pluton</h1>
-					<p>"Science sans conscience n'est que ruines de l'âme"</p>
-					<ul class="actions">
-						<li><a href="#galleries" class="button alt scrolly big">Continuer</a></li>
-					</ul>
-				</div>
-			</section>
-			<!-- Gallery -->
-			<section id="galleries">
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">Senior Software Developer</h3>
+                        <span class="job-period">2022 - Present</span>
+                    </div>
+                    <p class="company">Company Name</p>
+                    <ul class="job-description">
+                        <li>Developed and maintained web applications using TypeScript and React</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality software</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+            </section>
 
-				<!-- Photo Galleries -->
-				<div class="gallery">
-					<div class="container">
-						<div class="content" style="cursor:pointer;">
-							<a href="games.html">
-								<div class="content-overlay"></div>
-								<img class="content-image" src="images/games.png" alt="" />
-								<div class="content-details fadeIn-bottom">
-									<h3 class="content-title">Games</h3>
-									<p class="content-text">Solitaire, Snake, Démineur</p>
-								</div>
-							</a>
-						</div>
-						<div class="content">
-							<a href="http://neptune18.quickconnect.to/">
-								<div class="content-overlay"></div>
-								<img class="content-image" src="images/neptune.jpg" alt="" />
-								<div class="content-details fadeIn-bottom">
-									<h3 class="content-title">Neptune</h3>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="copyright">
-					&copy; Julien Dénéréaz | 2017
-				</div>
-			</footer>
-		</section>
-	</div>
+            <section class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid" id="skills-container">
+                    <!-- Skills will be populated by TypeScript -->
+                </div>
+            </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3 class="degree">Bachelor of Computer Science</h3>
+                    <p class="school">University Name</p>
+                    <span class="graduation-year">2020</span>
+                </div>
+            </section>
+        </main>
+    </div>
 
+    <script src="dist/main.js"></script>
 </body>
-
 </html>

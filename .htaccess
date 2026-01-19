@@ -1,7 +1,0 @@
-# Minimal .htaccess
-RewriteEngine On
-
-# Clean URLs for PHP files (only if file doesn't exist)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.php [NC,L]

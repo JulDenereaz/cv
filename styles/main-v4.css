@@ -327,6 +327,28 @@ body {
   padding: 0 2rem;
 }
 
+/* Base Tile Styles */
+.tile {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--secondary-color);
+  transition: var(--transition);
+}
+
+.tile:hover {
+  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
+  transform: translateX(5px);
+  border-left-color: var(--accent-color);
+}
+
+.tile-compact {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+}
+
 /* Qualifications Grid - 2x2 Tile Layout */
 .qualifications-section {
   margin-bottom: 4rem !important;
@@ -340,20 +362,11 @@ body {
 }
 
 .qualification-item {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
-  transition: var(--transition);
+  /* Inherits from .tile class */
 }
 
-
 .qualification-item:hover {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
   transform: scale(1.02) translateX(5px) translateY(-2px);
-  border-left-color: var(--accent-color);
 }
 
 .qualification-category {
@@ -446,18 +459,11 @@ body {
 }
 
 .timeline-content {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
+  /* Inherits from .tile class */
 }
 
 .timeline-item:hover .timeline-content {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
-  transform: translateX(5px);
+  /* Hover effect inherited from .tile */
 }
 
 .timeline-header {
@@ -523,18 +529,11 @@ body {
 }
 
 .skills-category {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
-  transition: var(--transition);
+  /* Inherits from .tile class */
 }
 
 .skills-category:hover {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
-  transform: translateX(5px);
+  /* Hover effect inherited from .tile */
 }
 
 .skills-category-title {
@@ -562,24 +561,17 @@ body {
 }
 
 .skill-tile {
-  background: var(--white);
-  padding: 1rem 1.25rem;
-  border-radius: 10px;
+  /* Inherits from .tile and .tile-compact classes */
   text-align: left;
   font-weight: 500;
   font-size: 0.95rem;
   color: var(--text-color);
-  transition: var(--transition);
   cursor: default;
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-
 
 .skill-logo {
   width: 36px;
@@ -588,12 +580,8 @@ body {
   flex-shrink: 0;
 }
 
-
-
 .skill-tile:hover {
-  border-left-color: var(--accent-color);
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
-  transform: translateX(5px);
+  /* Hover effect inherited from .tile */
 }
 
 
@@ -605,18 +593,11 @@ body {
 }
 
 .education-item {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
-  transition: var(--transition);
+  /* Inherits from .tile class */
 }
 
 .education-item:hover {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
-  transform: translateX(5px);
+  /* Hover effect inherited from .tile */
 }
 
 .education-header {
@@ -671,18 +652,11 @@ body {
 .publication-item {
   display: flex;
   gap: 1.5rem;
-  padding: 1.5rem;
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
-  transition: var(--transition);
+  /* Inherits from .tile class */
 }
 
 .publication-item:hover {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
-  transform: translateX(5px);
+  /* Hover effect inherited from .tile */
 }
 
 .publication-year {
@@ -745,16 +719,12 @@ body {
 }
 
 .teaching-item {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
+  /* Inherits from .tile class - add border-left for consistency */
+  border-left: 4px solid var(--secondary-color);
 }
 
 .teaching-item:hover {
-  box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
+  /* Hover effect inherited from .tile */
 }
 
 .teaching-header {
@@ -826,16 +796,14 @@ body {
 .conference-item {
   display: flex;
   gap: 1.5rem;
-  padding: 1.5rem;
-  background: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(4, 3, 3, 0.12);
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
+  /* Inherits from .tile class - remove border-left for conferences */
+  border-left: none;
 }
 
 .conference-item:hover {
+  /* Modified hover - no translateX for conferences */
   box-shadow: 0 8px 24px rgba(4, 3, 3, 0.18);
+  transform: none;
 }
 
 .conference-year {

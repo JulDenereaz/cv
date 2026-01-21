@@ -98,11 +98,11 @@ class CVApp {
           company: 'CHUV | Lausanne University Hospital - Data Stewardship Biomed Unit',
           period: 'Aug 2024 - Present',
           description: [
-            'Develop and maintain data management solutions for biomedical research data',
-            'Build full-stack applications using PHP for scientific data documentation and workflow optimization',
-            'Design database systems and APIs to facilitate data integration across research teams',
-            'Collaborate with researchers and clinicians to translate data management needs into technical solutions',
-            'Ensure compliance with biomedical data standards and regulatory requirements'
+            'Built full-stack applications using PHP for scientific data documentation and workflow optimization',
+            'Developed and maintained data management solutions for biomedical research data',
+            'Ensured automatic workflows from data generation to storage and sharing, adhering to FAIR data principles',
+            'Designed database systems and APIs to facilitate data integration across research teams and technological platforms',
+            'Collaborated with researchers and clinicians to translate data management needs into technical solutions',
           ]
         },
         {
@@ -360,7 +360,7 @@ class CVApp {
       
     skillsWithLogos.forEach(skill => {
       const skillElement = document.createElement('div');
-      skillElement.className = 'skill-tile';
+      skillElement.className = 'skill-tile tile tile-compact';
       
       skillElement.innerHTML = `
         <img src="${skill.logo}" alt="${skill.name}" class="skill-logo">
@@ -381,7 +381,7 @@ class CVApp {
       
       expElement.innerHTML = `
         <div class="timeline-marker"></div>
-        <div class="timeline-content">
+        <div class="timeline-content tile">
           <div class="timeline-header">
             <h3 class="timeline-title">${exp.title}</h3>
             <span class="timeline-period">${exp.period}</span>
@@ -403,7 +403,7 @@ class CVApp {
 
     this.data.education.forEach(edu => {
       const eduElement = document.createElement('div');
-      eduElement.className = 'education-item';
+      eduElement.className = 'education-item tile';
       
       let html = `
         <h3 class="degree">${edu.degree}</h3>
@@ -440,7 +440,7 @@ class CVApp {
 
     this.data.qualifications.forEach((qual, index) => {
       const qualElement = document.createElement('div');
-      qualElement.className = 'qualification-item';
+      qualElement.className = 'qualification-item tile';
       qualElement.style.animationDelay = `${index * 0.1}s`;
       
       qualElement.innerHTML = `
@@ -468,7 +468,7 @@ class CVApp {
 
     this.data.publications.forEach(pub => {
       const pubElement = document.createElement('div');
-      pubElement.className = 'publication-item';
+      pubElement.className = 'publication-item tile';
       
       let html = `
         <div class="publication-year">${pub.year}</div>
@@ -494,7 +494,7 @@ class CVApp {
 
     this.data.teaching.forEach(teach => {
       const teachElement = document.createElement('div');
-      teachElement.className = 'teaching-item';
+      teachElement.className = 'teaching-item tile';
       
       let html = `
         <div class="teaching-header">
@@ -524,7 +524,7 @@ class CVApp {
 
     this.data.conferences.forEach(conf => {
       const confElement = document.createElement('div');
-      confElement.className = 'conference-item';
+      confElement.className = 'conference-item tile';
       
       confElement.innerHTML = `
         <div class="conference-year">${conf.year}</div>

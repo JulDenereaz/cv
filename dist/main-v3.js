@@ -508,5 +508,19 @@ class CVApp {
 document.addEventListener('DOMContentLoaded', () => {
     const app = new CVApp();
     app.init();
+    // Setup accordion toggles for mobile
+    setupAccordions();
 });
+// Setup accordion functionality
+function setupAccordions() {
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+    accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const section = toggle.closest('.collapsible-section');
+            if (section) {
+                section.classList.toggle('expanded');
+            }
+        });
+    });
+}
 //# sourceMappingURL=main.js.map

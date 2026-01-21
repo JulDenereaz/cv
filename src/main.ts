@@ -158,8 +158,12 @@ class CVApp {
       ],
       qualifications: [
         {
-          category: 'Problem solving',
-          description: 'Developed two R Shiny applications and scripting in multiple programming languages, facilitating the analysis and visualization of different datasets.'
+          category: 'Adaptability',
+          description: 'Learned Laravel framework and database design from scratch to build a full-stack web application in a very short timeline with strict deadlines, demonstrating rapid learning and adaptability.'
+        },
+        {
+          category: 'Application development',
+          description: 'Built a comprehensive data management web application using Laravel framework for scientific data documentation and open research science through APIs and user-friendly interfaces.'
         },
         {
           category: 'Analytical thinking',
@@ -168,10 +172,6 @@ class CVApp {
         {
           category: 'Teamwork & collaboration',
           description: 'Fostered collaborative environments by working closely with diverse team members on multiple simultaneous projects, leading to successful publications.'
-        },
-        {
-          category: 'Communication',
-          description: 'Presented at multiple local and international scientific conferences, shared progress reports within the department regularly.'
         }
       ],
       publications: [

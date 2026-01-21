@@ -4,85 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Dénéréaz - CV</title>
-    <link rel="stylesheet" href="styles/main-v2.css?v=2025">
+    <link rel="stylesheet" href="styles/main-v3.css?v=2026">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="profile-section">
-                <div class="profile-photo" style="position: relative; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid #3498db; flex-shrink: 0;">
-                    <img src="profile.jpg" alt="Julien Dénéréaz Profile Photo" id="profile-img" style="width: 120px; height: 120px; object-fit: cover; display: block; position: absolute; top: 0; left: 0;" onerror="this.style.display='none'; document.querySelector('.photo-placeholder').style.display='flex';" onload="document.querySelector('.photo-placeholder').style.display='none';">
-                    <div class="photo-placeholder" style="width: 100%; height: 100%; background: linear-gradient(135deg, #3498db, #5dade2); display: none; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">JD</div>
+    <!-- Sticky Header -->
+    <header class="sticky-header" id="sticky-header">
+        <div class="header-content">
+            <h1 class="header-name">Julien Dénéréaz</h1>
+            <p class="header-title">Data Scientist & Bioinformatics Researcher</p>
+        </div>
+    </header>
+
+    <div class="cv-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Profile Photo -->
+                <div class="sidebar-photo">
+                    <img src="profile.jpg" alt="Julien Dénéréaz" id="profile-img" onerror="this.style.display='none'; document.querySelector('.photo-placeholder').style.display='flex';" onload="document.querySelector('.photo-placeholder').style.display='none';">
+                    <div class="photo-placeholder" style="display: none;">JD</div>
                 </div>
-                <div class="profile-info">
-                    <h1 class="name">Julien Dénéréaz</h1>
-                    <p class="title">Data Scientist & Bioinformatics Researcher</p>
-                    <div class="contact">
-                        <div class="contact-row">
-                            <span class="contact-item">📧 denereaz.julien@gmail.com</span>
-                        </div>
-                        <div class="contact-row">
-                            <span class="contact-item">🌐 LinkedIn: linkedin.com/in/julien-denereaz</span>
-                            <span class="contact-item">🔬 ORCID: 0000-0001-6047-1726</span>
-                        </div>
-                        <div class="contact-row">
-                            <span class="contact-item">🇨🇭 Swiss National</span>
-                            <span class="contact-item">📍 Lausanne, Switzerland</span>
-                        </div>
+
+                <!-- Contact Information -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Contact</h3>
+                    <div class="sidebar-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:denereaz.julien@gmail.com">denereaz.julien@gmail.com</a>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="icon">📍</span>
+                        <span>Lausanne, Switzerland</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <span class="icon">🇨🇭</span>
+                        <span>Swiss National</span>
                     </div>
                 </div>
-            </div>
-        </header>
 
+                <!-- Links -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Links</h3>
+                    <div class="sidebar-item">
+                        <img src="assets/linkedin.svg" alt="LinkedIn" class="sidebar-icon">
+                        <a href="https://linkedin.com/in/julien-denereaz" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="sidebar-item">
+                        <img src="assets/orcid.svg" alt="ORCID" class="sidebar-icon">
+                        <a href="https://orcid.org/0000-0001-6047-1726" target="_blank">ORCID</a>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Key Features</h3>
+                    <div class="key-feature">PhD in Life Sciences</div>
+                    <div class="key-feature">Data Science Expert</div>
+                    <div class="key-feature">Bioinformatics Specialist</div>
+                    <div class="key-feature">Full-Stack Developer</div>
+                </div>
+
+                <!-- Keywords -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Expertise</h3>
+                    <div class="keyword-cloud">
+                        <span class="keyword">NGS</span>
+                        <span class="keyword">Python</span>
+                        <span class="keyword">R</span>
+                        <span class="keyword">CRISPR</span>
+                        <span class="keyword">Genomics</span>
+                        <span class="keyword">Machine Learning</span>
+                        <span class="keyword">Shiny Apps</span>
+                        <span class="keyword">PHP</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">Languages</h3>
+                    <div id="languages-spoken-sidebar"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
         <main class="main-content">
             <section class="section">
                 <h2 class="section-title">Professional Summary</h2>
                 <p class="section-content">
-                    Data Scientist with a PhD in Life Sciences, specializing in bioinformatics and genomic data analysis. 
-                    Currently working at CHUV's Data Stewardship Biomed Unit, building software solutions that help scientists 
-                    better manage and organize their biomedical data. Research focus includes NGS technology, Data Science, 
-                    Systems biology, and fundamental microbiology. Passionate about translating complex biological questions 
-                    into computational solutions with extensive experience in R, Python, and JavaScript.
+                    I build software solutions that help scientists better manage and organize their data. Passionate about problem solving, system design, and creating reliable tools that improve research workflows.
                 </p>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Summary of Qualifications</h2>
-                <div class="qualifications-container" id="qualifications-container">
+                <p class="section-content">
+                    Over the past 2 years, I developed a full-stack web application for scientific data documentation, gaining strong experience with PHP, MySQL, REST APIs, and database design. I enjoy translating user needs into scalable, production-ready solutions.
+                </p>
+                <p class="section-content">
+                    Outside of work, I designed, built, and maintain a fully DIY self-hosted NAS server (including custom 3D-printed components), strengthening my skills in Linux, networking, storage systems, and open-source technologies.
+                </p>
+                
+                <div class="qualifications-grid" id="qualifications-container">
                     <!-- Qualifications will be populated by TypeScript -->
                 </div>
             </section>
 
             <section class="section">
                 <h2 class="section-title">Professional Experience</h2>
-                <div class="experience-container" id="experience-container">
+                <div class="timeline-container" id="experience-container">
                     <!-- Experience items will be populated by TypeScript -->
                 </div>
             </section>
 
             <section class="section">
                 <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-section">
-                    <div class="skills-category">
-                        <h3 class="skills-category-title">Programming Languages</h3>
-                        <div class="skills-grid" id="languages-container"></div>
-                    </div>
-                    <div class="skills-category">
-                        <h3 class="skills-category-title">Frameworks & Libraries</h3>
-                        <div class="skills-grid" id="frameworks-container"></div>
-                    </div>
-                    <div class="skills-category">
-                        <h3 class="skills-category-title">Tools & Technologies</h3>
-                        <div class="skills-grid" id="tools-container"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-container" id="projects-container">
-                    <!-- Projects will be populated by TypeScript -->
-                </div>
+                <div class="skills-tiles" id="all-skills-container"></div>
             </section>
 
             <section class="section">
@@ -129,6 +162,6 @@
         </main>
     </div>
 
-    <script src="dist/main-v2.js?v=2025"></script>
+    <script src="dist/main-v3.js?v=2026"></script>
 </body>
 </html>
